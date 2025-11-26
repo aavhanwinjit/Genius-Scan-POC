@@ -1,5 +1,6 @@
 package com.ram.courier
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -50,6 +51,10 @@ class MainActivity : AppCompatActivity() {
             val configuration = ReadableCodeConfiguration(true)
 
             readableCodeLauncher.launch(configuration)
+        }
+
+        findViewById<Button>(R.id.btnGoogleMLKit).setOnClickListener {
+            startActivity(Intent(this, MLKitScanActivity::class.java))
         }
     }
 }
